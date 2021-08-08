@@ -70,7 +70,7 @@ class Gamestats(commands.Cog):
                         rank = data["data"]["segments"][i]["stats"]["tier"]["metadata"]["name"]
                         emoji = ranktoemoji[rank]
                         if rank == "Unranked":
-                            values.append(f"<:Unranked:843058631330103296>— {mmr} ᴍᴍʀ\nUnranked")
+                            values.append(f"{emoji}— {mmr} ᴍᴍʀ\nUnranked")
                         elif rank == "Supersonic Legend":
                             values.append(f"{emoji}— {mmr} ᴍᴍʀ\n{rank}\n*\> `{perc}`%*")
                         else:
@@ -79,9 +79,9 @@ class Gamestats(commands.Cog):
                             values.append(f"{emoji}— {mmr} ᴍᴍʀ\n{rank}\n{div}\n*\> `{perc}`%*")
                         break
                     elif i==9:
-                        values.append("<:Unranked:843058631330103296>— 600 ᴍᴍʀ\nUnranked")
+                        values.append(f"{ranktoemoji["Unranked"]}— 600 ᴍᴍʀ\nUnranked")
             except IndexError:
-                values.append("<:Unranked:843058631330103296>— 600 ᴍᴍʀ\nUnranked")
+                values.append(f"{ranktoemoji["Unranked"]}— 600 ᴍᴍʀ\nUnranked")
 
         mmr_cas = data["data"]["segments"][1]["stats"]["rating"]["value"]   #Casual stats.
         perc_cas = arrondir(data["data"]["segments"][1]["stats"]["rating"]["percentile"])
