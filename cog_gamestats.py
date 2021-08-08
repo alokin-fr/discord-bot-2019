@@ -13,7 +13,7 @@ def arrondir(x):    #For text formatting purposes.
     else:
         return x
 
-token = "f956e5c2-6a88-4d2a-bfee-0652b4fd774e"
+token = ""
 
 class Gamestats(commands.Cog):
     def __init__(self,client):
