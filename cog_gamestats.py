@@ -24,7 +24,7 @@ class Gamestats(commands.Cog):
         name = " ".join(words)
         headers = {"TRN-Api-Key":token}
 
-        r = requests.get(f"https://public-api.tracker.gg/v2/rocket-league/standard/profile/epic/{name}"", headers=headers)
+        r = requests.get(f"https://public-api.tracker.gg/v2/rocket-league/standard/profile/epic/{name}", headers=headers)
 
         if str(r)=="<Response [404]>":
             return await ctx.send("Player not found.")
