@@ -191,7 +191,5 @@ class Quiz(commands.Cog):
                 pass
 
 
-
-
 def setup(client):
     client.add_cog(Quiz(client))
